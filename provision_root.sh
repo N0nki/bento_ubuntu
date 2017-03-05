@@ -5,9 +5,11 @@ echo "provision_root.sh"
 echo "update package"
 apt-get update
 apt-get -y upgrade
-apt-get install ubuntu-desktop
+# apt-get install ubuntu-desktop
 # dpkg --configure -a
 
+echo "ruby-build necessary packages"
+apt-get install -y libssl-dev libreadline-dev zlib1g-dev
 
 echo "install vim"
 apt-get install -y vim vim-gnome
