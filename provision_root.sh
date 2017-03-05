@@ -19,7 +19,7 @@ apt-get install software-properties-common
 add-apt-repository ppa:neovim-ppa/unstable
 apt-get update
 apt-get install neovim
-sudo apt-get install python3-dev python3-pip python-pip
+apt-get install python3-dev python3-pip python-pip
 
 echo "install git"
 apt-get install -y git
