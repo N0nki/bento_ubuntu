@@ -11,7 +11,7 @@ echo "setup vim"
 sh dotfiles/vim/setup_vim.sh
 
 echo "setup neovim"
-mkdir ~/.config
+# mkdir ~/.config
 sh dotfile/nvim/setup_nvim.sh
 
 echo "Ruby"
@@ -20,7 +20,7 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 ~/.rbenv/bin/rbenv init
-srouce .bashrc
+source .bashrc
 type rbenv
 echo "ruby-build"
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
