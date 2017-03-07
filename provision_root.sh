@@ -4,7 +4,8 @@ echo "provision_root.sh"
 
 echo "update package"
 apt-get update
-apt-get -y upgrade
+DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+# apt-get -y upgrade
 # apt-get install ubuntu-desktop
 # dpkg --configure -a
 
