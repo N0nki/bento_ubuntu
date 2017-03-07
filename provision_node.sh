@@ -12,7 +12,7 @@ sh dotfiles/vim/setup_vim.sh
 
 echo "setup neovim"
 # mkdir ~/.config
-sh dotfile/nvim/setup_nvim.sh
+sh dotfiles/nvim/setup_nvim.sh
 
 echo "Ruby"
 echo "rbenv"
