@@ -1,4 +1,4 @@
-!/bin/sh
+#!/bin/sh
 
 echo "provision_node.sh"
 pip install -U pip3
