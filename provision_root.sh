@@ -5,8 +5,8 @@ echo "provision_root.sh"
 echo "update package"
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
-# apt-get -y upgrade
-# apt-get install ubuntu-desktop
+apt-get install -y ubuntu-desktop
+# shutdown -r now
 # dpkg --configure -a
 
 echo "ruby-build necessary packages"
