@@ -32,3 +32,12 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 exec $SHELL
+
+echo "ns3"
+cd
+mkdir workspace
+cd workspace
+wget http://www.nsnam.org/release/ns-allinone-3.26.tar.bz2
+tar xjf ns-allinone-3.26.tar.bz2
+./build.py --enable-examples --enable-tests
+# ./test.py -c core
