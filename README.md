@@ -2,3 +2,8 @@
 ```
 vagrant box add https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04
 ```
+
+# TODO
+
+- [ ] ns3
+- [ ] wireshark
