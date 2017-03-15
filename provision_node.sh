@@ -34,6 +34,17 @@ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source .bashrc
 # exec $SHELL
 
+echo "glpk"
+wget http://ftp.gnu.org/gnu/glpk/glpk-4.61.tar.gz
+gzip -d glpk-4.61.tar.gz
+tar -x < glpk-4.61.tar
+cd glpk-4.61
+./configure
+make
+make check
+make install
+ldconfig
+
 echo "ns3"
 cd
 mkdir workspace
