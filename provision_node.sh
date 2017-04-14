@@ -42,7 +42,7 @@ cd glpk-4.61
 ./configure
 make
 make check
-make install
+sudo make install
 ldconfig
 
 echo "ns3"
