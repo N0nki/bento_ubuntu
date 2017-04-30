@@ -1,18 +1,17 @@
 #!/bin/sh
 
 echo "provision_node.sh"
-pip install -U pip3
 
 echo "clone dotfiles"
 cd ~/
 git clone https://github.com/N0nki/dotfiles
 
-echo "setup vim"
-sh dotfiles/vim/setup_vim.sh
-
 echo "setup neovim"
 # mkdir ~/.config
 sh dotfiles/nvim/setup_nvim.sh
+
+echo "setup vim"
+sh dotfiles/vim/setup_vim.sh
 
 echo "Ruby"
 echo "rbenv"
@@ -32,6 +31,8 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source .bashrc
+curl -KL https://bootstrap.pypa.io/get-pip.py | sudo python3
+sudo apt-get install python3-venv
 # exec $SHELL
 
 echo "glpk"
