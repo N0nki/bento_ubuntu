@@ -1,17 +1,16 @@
 #!/bin/sh
 
 echo "provision_node.sh"
-
 echo "clone dotfiles"
 cd ~/
 git clone https://github.com/N0nki/dotfiles
 
-echo "setup neovim"
+# echo "setup neovim"
 # mkdir ~/.config
-sh dotfiles/nvim/setup_nvim.sh
+# sh dotfiles/nvim/setup_nvim.sh
 
-echo "setup vim"
-sh dotfiles/vim/setup_vim.sh
+# echo "setup vim"
+# sh dotfiles/vim/setup_vim.sh
 
 echo "Ruby"
 echo "rbenv"
@@ -31,9 +30,9 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source .bashrc
-curl -KL https://bootstrap.pypa.io/get-pip.py | sudo python3
-sudo apt-get install python3-venv
-# exec $SHELL
+pip3 install --upgrade pip
+# curl -KL https://bootstrap.pypa.io/get-pip.py | sudo python3
+# sudo apt-get install python3-venv
 
 echo "glpk"
 wget http://ftp.gnu.org/gnu/glpk/glpk-4.61.tar.gz
@@ -54,4 +53,3 @@ wget http://www.nsnam.org/release/ns-allinone-3.26.tar.bz2
 tar xjf ns-allinone-3.26.tar.bz2
 cd ns-allinone-3.26
 ./build.py --enable-examples --enable-tests
-# ./test.py -c core
