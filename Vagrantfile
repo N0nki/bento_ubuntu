@@ -60,12 +60,13 @@ Vagrant.configure("2") do |config|
   # config.push.define "atlas" do |push|
   #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
   # end
-
+  
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   # config.vm.provision "shell", inline: <<-SHELL
-  # echo hello vagrant
+  # export http_proxy="http://proxy.co.jp:8080/"
+  # export https_proxy="http://proxy.co.jp:8080/"
   # SHELL
   config.vm.provision "shell", path: "provision_root.sh"
   config.vm.provision "shell", path: "provision_node.sh", :privileged => false
