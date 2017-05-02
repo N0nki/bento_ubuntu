@@ -45,11 +45,11 @@ make check
 sudo make install
 ldconfig
 
-echo "ns3"
-cd
-mkdir workspace
-cd workspace
-wget http://www.nsnam.org/release/ns-allinone-3.26.tar.bz2
-tar xjf ns-allinone-3.26.tar.bz2
-cd ns-allinone-3.26
-./build.py --enable-examples --enable-tests
+# echo "ns3"
+# cd
+# mkdir workspace
+# cd workspace
+# wget http://www.nsnam.org/release/ns-allinone-3.26.tar.bz2
+# tar xjf ns-allinone-3.26.tar.bz2
+# cd ns-allinone-3.26
+# ./build.py --enable-examples --enable-tests
