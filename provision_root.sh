@@ -9,7 +9,9 @@ apt-get install -y ubuntu-desktop
 # dpkg --configure -a
 
 echo "development environment"
-apt-get install -y libssl-dev libreadline-dev zlib1g-dev build-essential libsqlite3-dev libgdbm-dev libbz2-dev sqlite3 tk-dev zip python3-dev python-dev python3-pip python-pip python3-venv python3-tk git
+apt-get install -y libssl-dev libreadline-dev zlib1g-dev build-essential libsqlite3-dev libgdbm-dev libbz2-dev sqlite3 tk-dev zip python3-dev python-dev python3-pip python-pip python3-venv python3-tk git language-pack-ja-base language-pack-ja ibus-mozc
+
+source /etc/default/locale
 
 echo "install vim"
 apt-get install -y vim vim-gnome
