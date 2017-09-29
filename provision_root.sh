@@ -17,7 +17,7 @@ echo "install vim"
 apt-get install -y vim vim-gnome
 
 echo "install neovim"
-apt-get install software-properties-common
-add-apt-repository ppa:neovim-ppa/unstable
-apt-get update
-apt-get install neovim
+apt-get install -y software-properties-common
+add-apt-repository -y ppa:neovim-ppa/unstable
+apt-get -y update
+apt-get install -y neovim
