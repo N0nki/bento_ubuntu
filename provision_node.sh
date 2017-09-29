@@ -12,6 +12,15 @@ git clone https://github.com/N0nki/dotfiles
 # echo "setup vim"
 # sh dotfiles/vim/setup_vim.sh
 
+echo "install vim"
+git clone https://github.com/vim/vim.git
+cd ~/vim
+git pull
+cd ~/vim/src/
+./configure --with-features=huge --enable-gui=gnome2 --enable-perlinterp --enable-pythoninterp --enable-python3interp --enable-rubyinterp --enable-luainterp --with-luajit --enable-fail-if-missing
+make
+cd ~/
+
 echo "Ruby"
 echo "rbenv"
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -31,8 +40,10 @@ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source .bashrc
 pip3 install --upgrade pip
-# curl -KL https://bootstrap.pypa.io/get-pip.py | sudo python3
-# sudo apt-get install python3-venv
+python3 -m venv ~/seminar
+source ~/seminar/bin/activate
+pip install -r ~/dotfiles/python/lab_ubuntu/requirements.txt
+deactivate
 
 echo "glpk"
 wget http://ftp.gnu.org/gnu/glpk/glpk-4.61.tar.gz
