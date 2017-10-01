@@ -40,11 +40,14 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source .bashrc
-pip3 install --upgrade pip
-python3 -m venv ~/seminar
-source ~/seminar/bin/activate
-pip install -r ~/dotfiles/python/lab_ubuntu/requirements.txt
-deactivate
+echo 'python3 -m venv ~/myenv' >> setup_myenv.sh
+echo 'source ~/myenv/bin/activate' >> setup_myenv.sh
+echo 'pip install --upgrade pip' >> setup_myenv.sh
+echo 'pip install -r ~/dotfiles/python/lab_ubuntu/requirements.txt' >> setup_myenv.sh
+echo 'jupyter contrib nbextension install --user' >> setup_myenv.sh
+echo 'jupyter nbextensions_configurator enable --user' >> setup_myenv.sh
+echo 'deactivate' >> setup_myenv.sh
+source setup_myenv.sh
 
 echo "glpk"
 wget http://ftp.gnu.org/gnu/glpk/glpk-4.61.tar.gz
