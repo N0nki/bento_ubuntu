@@ -48,6 +48,7 @@ echo 'jupyter contrib nbextension install --user' >> setup_myenv.sh
 echo 'jupyter nbextensions_configurator enable --user' >> setup_myenv.sh
 echo 'deactivate' >> setup_myenv.sh
 source setup_myenv.sh
+echo 'alias myenv "source ~/myenv/bin/activate"' >>~/.bashrc
 
 echo "glpk"
 wget http://ftp.gnu.org/gnu/glpk/glpk-4.61.tar.gz
