@@ -5,13 +5,6 @@ echo "clone dotfiles"
 cd ~/
 git clone https://github.com/N0nki/dotfiles
 
-# echo "setup neovim"
-# mkdir ~/.config
-# sh dotfiles/nvim/setup_nvim.sh
-
-# echo "setup vim"
-# sh dotfiles/vim/setup_vim.sh
-
 echo "install vim"
 git clone https://github.com/vim/vim.git
 cd ~/vim
@@ -47,8 +40,8 @@ echo 'pip install -r ~/dotfiles/python/lab_ubuntu/requirements.txt' >> setup_mye
 echo 'jupyter contrib nbextension install --user' >> setup_myenv.sh
 echo 'jupyter nbextensions_configurator enable --user' >> setup_myenv.sh
 echo 'deactivate' >> setup_myenv.sh
-source setup_myenv.sh
-echo 'alias myenv "source ~/myenv/bin/activate"' >>~/.bashrc
+source ./setup_myenv.sh
+echo 'alias myenv="source ~/myenv/bin/activate"' >>~/.bashrc
 
 echo "glpk"
 wget http://ftp.gnu.org/gnu/glpk/glpk-4.61.tar.gz
